@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content type" content= "text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <!-- Arithmetic progression and Geometric progression solver-->
+    <link rel="stylesheet" href="APGP.css" title="" type="text/css"/>
+    <script src="progression.js" type="text/javascript" charset="utf-8"></script>
+    <title> Arithmetic progression and Geometric progression Calculator</title>
+  </head>
+  <body>
+    <header>
+      <canvas id="canvas">Not Supported</canvas>
+   <h1>AP & GP Calculator</h1>
+   </header>
+    <article>
+      <h2>Arithmetic Progression</h2>
+    <section class = "AP">
+    <label for="FT">First Term</label><br>
+    <input type="number" id="FT" placeholder="First term"><br>
+    <p>Find the First Term;</p>
+     <button id="solveA">  Given the nth term</button>
+     <button id="solveA1">Given the second term</button>
+     <button id="solveA2"> Given the sum and last term</button>
+     <button id="solveA3">Given the sum and common difference</button><br><br>
+    <label for="ST"> Second Term</label><br>
+    <input type="number" id="ST" placeholder="Second term"><br>
+    <button id="solveSt"> Find Second Term</button><br><br>
+    <label for ="CD">Common Difference</label><br>
+    <input type="number" id="CD" placeholder="Common Difference"><br>
+    <p>Find Common Difference;</p>
+    <button id="solveCd">Given second term</button>
+    <button id="solveCd1">Given nth term</button>
+    <button id="solveCd2">Given sum of term</button><br><br>
+    
+    <label for ="nth">Value Of nth term</label><br>
+   <input type ="number" id="nth" placeholder="Nth term value "><br>
+    <button id="solveNth">Find Nth Term </button><br><br>
+    <!--<label for ="nth">Value Of nth term</label>
+    <input type ="number" id="nth" placeholder="Nth term value 2"><br><br>-->
+    <label for="n">Number Of Term</label><br>
+    <input type="number" id="n" placeholder=" Term Position "><br>
+    <p>Find Number of Term;</p>
+    <button id="solveN">Given the nth term</button>
+    <button id="solveN1">Given the sum and last term</button>
+    <button id="solveN2">Given the sum and Common difference</button><br><br>
+ <!--   <label for="n">Number Of Term</label>
+    <input type="number" id="n2" placeholder=" Term Position 2"><br><br>-->
+     <label for="lt">Last Term</label><br>
+    <input type="number" id="lt" placeholder=" Last term"><br>
+    <p>Find Last Term;</p>
+ <button id="solveLt"> Given the common difference</button>
+    <button id="solveLt1">Given the sum</button><br><br>
+     <label for="sum">Sum Of term</label><br>
+    <input type="number" id="sum" placeholder="sum of all term"><br>
+    <p>Find Sum of term</p>
+     <button id="solveSum">Given the last term</button>
+ <button id="solveSum1">Given the common difference</button><br><br>
+    <button id="clear"> RESET</button><br><hr><br>
+    </section>
+    <section class="GP">
+      <h2>Geometric Progression</h2>
+   <label for="gpa">First Term</label><br>
+    <input type="number" id="gpa" placeholder="First term"><br>
+    <p> Find the First term;</p>
+    <button id="solvegpa">Given the second term</button>
+    <button id="solvegpa1">Given the nth term</button>
+    <button id="solvegpa2">Given the sum ( r > 1 )</button>
+    <button id="solvegpa3">Given  the sum ( r < 1)</button>
+    <button id="solvegpa4">Given the infinite term</button><br><br>
+    <label for="gp2"> Second Term</label><br>
+    <input type="number" id="gp2" placeholder="Second term"><br>
+    <button id="solvegp2"> Find the second term</button><br><br>
+    <label for = "gpr">Common Ratio</label><br>
+    <input type="number" id="gpr" placeholder="Common Ratio"><br>
+    <p>Find the common ratio;</p>
+    <button id="solvegpr">Given the second term</button>
+    <button id="solvegpr1">Given the  nth term</button>
+   <!-- <button id="solvegpr2">Given the sum (r > 1)</button>
+    <button id="solvegpr3">Given the sum (r < 1)</button>-->
+    <button id="solvegpr4">Given the sum of infinite term</button><br><br>
+     <label for="gpn">Number Of Term</label><br>
+   <input type="number" id="gpn" placeholder=" Term Position 1"><br>
+   <p>Find the number of term;</p>
+        <button id="solvegpn">When the nth term is given</button>
+        <button id="solvegpn1">When r < 1 </button>
+        <button id="solvegpn2"> When r > 1</button><br><br>
+    <label for="gpnth">nth Term</label><br>
+    <input type="number" id="gpnth" placeholder="nth term"><br>
+    <button id="solvegpnth"> Find the nth term</button><br><br>
+     <label for="gpsum">Sum Of term</label><br>
+  <input type="number" id="gpsum" placeholder="sum of all term"><br>
+  <p>Find the sum of term;</p>
+   <button id="solvegpsum"> Given the sum (r > 1)</button>
+    <button id="solvegpsum1"> Given the sum (r < 1)</button><br><br>
+    <label for="gpsumi">Sum of infinite term</label><br>
+    <input type="number" id="gpsumi" placeholder="sum of infinte term"><br>
+     <button id="solvegosumi"> Find the sum of infinite term</button><br><br>
+    <button id="clear1"> RESET</button>
+    </section><hr>
+    <section class="AP_note">
+      <h2>Arithmetic Progression</h2><br>
+      <p>Arithmetic Progression (AP) is a sequence of numbers in order, in which the difference between any two consecutive numbers is a constant value. It is also called Arithmetic Sequence. For example, the series of natural numbers: 1, 2, 3, 4, 5, 6,… is an Arithmetic Progression, which has a common difference between two successive terms (say 1 and 2) equal to 1 (2 -1). Even in the case of odd numbers and even numbers, we can see the common difference between two successive terms will be equal to 2.</p><br><br>
+<h3>Arithmetic Progression Formulas</h3><br>
+<p>There are two major formulas we come across when we learn about Arithmetic Progression, which is related to:</p>
+<ul>
+  <li>The nth term of AP</li>
+<li>Sum of the first n terms</li>
+</ul>
+<p>Let us learn here both the formulas with examples.<br>
+<h4>nth Term of an AP</h4><br>
+The formula for finding the n-th term of an AP is:<br>
+an = a + (n − 1) × d<br>
+Where <br><br>
+
+a = First term<br><br>
+
+d = Common difference<br><br>
+
+n = number of terms<br><br>
+
+a<sub>n</sub> = nth term<br><br>
+
+Example: Find the nth term of AP: 1, 2, 3, 4, 5…., an, if the number of terms are 15.<br><br>
+Solution: Given, AP: 1, 2, 3, 4, 5…., an<br>
+n=15<br>
+
+By the formula we know, an = a+(n-1)d<br>
+
+First-term, a =1<br>
+
+Common difference, d=2-1 =1<br>
+
+Therefore, a<sub>n</sub> = a <sub>15</sub> = 1+(15-1)1 = 1+14 = 15<br><br>
+
+<p>Note: The behaviour of the sequence depends on the value of a common difference.<br>
+
+If the value of “d” is positive, then the member terms will grow towards positive infinity<br>
+If the value of “d” is negative, then the member terms grow towards negative infinity <br></p>
+
+<h4>Sum of N Terms of AP</h4>
+<p>For an AP, the sum of the first n terms can be calculated if the first term, common difference and the total terms are known. The formula for the arithmetic progression sum is explained below:</p>
+
+Consider an AP consisting “n” terms.<br>
+
+Sn = n/2[2a + (n − 1) × d]<br>
+This is the AP sum formula to find the sum of n terms in series.<br>
+
+<h4>Sum of AP when the Last Term is Given</h4>
+Formula to find the sum of AP when first and last terms are given as follows:<br>
+S  = n/2 (first term + last term)<br>
+<table border="1">
+<tr>
+  <td>General Form of AP	</td>
+<td>a, a + d, a + 2d, a + 3d, . . .</td>
+</tr>
+<tr>
+  <td>The nth term of AP</td>
+  <td>a<sub>n</sub> = a + (n – 1) × d</td>
+  </tr>
+<tr>
+  <td>Sum of n terms in AP</td>	
+<td>S = n/2[2a + (n − 1) × d]</td>
+</tr>
+<tr><td>Sum of all terms in a finite AP with the last term as ‘l’</td><td>	n/2(a + l)</td></tr>
+</table></p>
+    </section><br><hr><br>
+    <section class="GP_note">
+      <h2> Geometric Sequence /Progression</h2>
+<p><br>A geometric progression or a geometric sequence is the sequence, in which each term is varied by another by a common ratio. The next term of the sequence is produced when we multiply a constant (which is non-zero) to the preceding term. It is represented by:<br><br>
+
+a, ar, ar<sup>2</sup>, ar<sup>3</sup>, ar<sup>4</sup>, and so on.<br><br>
+
+Where a is the first term and r is the common ratio.<br><br>
+
+<p>Note: It is to be noted that when we divide any succeeding term from its preceding term, then we get the value equal to the common ratio.</p>
+
+Suppose we divide the 3rd term by the 2nd term we get:<br><br>
+
+ar2/ar = r<br><br>
+
+In the same way:<br><br>
+
+ar³/ar² = r<br><br>
+
+ar⁴/a³ = r<br><br>
+
+<h3>Properties of Geometric Progression (GP)</h3>
+Some of the important properties of GP are listed below:<br>
+
+<ul><li>Three non-zero terms a, b, c are in GP if and only if b2 = ac</li>
+<li>In a GP,</li>
+Three consecutive terms can be taken as a/r, a, ar<br>
+Four consecutive terms can be taken as a/r<sup>3</sup>, a/r, ar, ar <sup>3</sup><br>
+Five consecutive terms can be taken as a/r<sup>2</sup>, a/r, a, ar, ar<sup>2</sup><br>
+<li>In a finite GP, the product of the terms equidistant from the beginning and the end is the same</li>
+That means, t<sup>1</sup>.t<sup>n</sup> = t2.tn-1 = t3.tn-2 = …..<br>
+<li>If each term of a GP is multiplied or divided by a non-zero constant, then the resulting sequence is also a GP with the same common ratio</li>
+<li>The product and quotient of two GP’s is again a GP</li>
+<li>If each term of a GP is raised to the power by the same non-zero quantity, the resultant sequence is also a GP</li>
+<li>If a1, a2, a3,… is a GP of positive terms then log a1, log a2, log a3,… is an AP (arithmetic progression) and vice versa</li>
+</ul>
+<h3>General Form of Geometric Progression</h3>
+The general form of Geometric Progression is:<br><br>
+
+a, ar, ar<sup>2</sup>, ar<sup>3</sup>, ar<sup>4</sup>,…, arn-1<br><br>
+
+Where,<br><br>
+
+a = First term<br><br>
+
+r = common ratio<br><br>
+
+ar<sup>n-1</sup>  = nth term<br><br>
+
+
+<h3>General Term or Nth Term of Geometric Progression</h3><br>
+Let a be the first term and r be the common ratio for a Geometric Sequence.<br><br>
+
+Then, the second term, a2 = a × r = ar<br><br>
+
+Third term, a3 = a2 × r = ar × r = ar2<br><br>
+
+Similarly, nth term, an = ar^n-1<br><br>
+
+Therefore, the formula to find the nth term of GP is:<br><br>
+
+an = tn = arn-1<br><br>
+Note: The nth term is the last term of finite GP.
+<br>
+<h3>Common Ratio of GP</h3><br>
+
+Consider the sequence a, ar, ar2, ar3,……<br><br>
+
+First term = a<br><br>
+
+Second term = ar<br><br>
+
+Third term = ar2<br><br>
+
+Similarly, nth term, tn = arn-1<br><br>
+
+Thus, the common ratio of geometric progression formula is given as:<br><br>
+
+Common ratio = (Any term) / (Preceding term)<br><br>
+
+= tn / tn-1<br><br>
+
+= (arn – 1 ) /(arn – 2)<br><br>
+
+= r<br>
+
+Thus, the general term of a GP is given by arn-1 and the general form of a GP is a, ar, ar2,…..<br><br>
+
+For Example: r = t2 / t1 = ar / a = r<br><br>
+
+<h3>Sum of N term of GP</h3><br>
+Suppose a, ar, ar2, ar3,……arn-1 is the given Geometric Progression.<br><br>
+
+Then the sum of n terms of GP is given by:<br><br>
+ <pre>
+Sn = a + ar + ar2 + ar3 +…+ arn-1
+
+The formula to find the sum of n terms of GP is:
+
+Sn = a[(rn – 1)/(r – 1)] if r ≠ 1 and r > 1
+Where
+
+a is the first term
+
+r is the common ratio
+
+n is the number of terms
+
+Also, if the common ratio is equal to 1, then the sum of the GP is given by:
+
+Sn = na if r = 1
+
+<h3>Types of Geometric Progression</h3><br><br>
+Geometric progression can be divided into two types based on the number of terms it has. They are:
+
+Finite geometric progression (Finite GP)<br>
+Infinite geometric progression (Infinite GP)<br><br>
+These two GPs are explained below with their representations and the formulas to find the sum.
+
+Finite Geometric Progression<br>
+The terms of a finite G.P. can be written as a, ar, ar2, ar3,……arn-1
+
+a, ar, ar2, ar3,……arn-1 is called finite geometric series.
+
+The sum of finite Geometric series is given by:
+
+Sn = a[(rn – 1)/(r – 1)] if r ≠ 1 and r > 1
+
+Infinite Geometric Progression<br>
+Terms of an infinite G.P. can be written as a, ar, ar2, ar3, ……arn-1,…….
+
+a, ar, ar2, ar3, ……arn-1,……. is called infinite geometric series.
+
+The sum of infinite geometric series is given by:
+
+</pre>
+ 
+This is called the geometric progression formula of sum to infinity.
+<h3>Geometric Progression Formulas</h3>
+The list of formulas related to GP is given below which will help in solving different types of problems.<br><br>
+
+<ul>
+  <li>The general form of terms of a GP is a, ar, ar2, ar3, and so on. Here, a is the first term and r is the common ratio.</li>
+<li>The nth term of a GP is Tn = arn-1</li>
+<li>Common ratio = r = Tn/ Tn-1</li>
+<li>The formula to calculate the sum of the first n terms of a GP is given by:<br><br>
+Sn = a[(rn – 1)/(r – 1)] if r ≠ 1and r > 1<br><br>
+Sn = a[(1 – rn)/(1 – r)] if r ≠ 1 and r < 1<br><br></li>
+<li>The nth term from the end of the GP with the last term l and common ratio r = l/ [r(n – 1)].</li>
+<li>The sum of infinite, i.e. the sum of a GP with infinite terms is S∞= a/(1 – r) such that 0 < r < 1.</li>
+<li>If three quantities are in GP, then the middle one is called the geometric mean of the other two terms. </li>
+<li>If a, b and c are three quantities in GP, then and b is the geometric mean of a and c. This can be written as b2 = ac or b =√ac</li>
+<li>Suppose a and r be the first term and common ratio respectively of a finite GP with n terms. Thus, the kth term from the end of the GP will be = arn-k.</li>
+</ul>
+</p>
+    </section><br><hr><br>
+    </article>
+    <footer style="text-align: center">  Right Fix &copy</footer><br>
+  </body>
+</html>

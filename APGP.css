@@ -1,0 +1,52 @@
+canvas{
+  width:400px;
+  height:100px;
+  position: absolute;
+}
+*{
+ box-sizing: border-box;
+ margin: 3px  auto;
+ padding: auto;
+ }
+ body{
+margin-left:15px;
+margin-right:15px;
+font-size:  15px;
+font-family: 'Times New Roman';
+width:100%;
+background-color: ;
+line-height: ;
+}
+pre{
+  font-family: "Times New Roman";
+  width: ;
+  overflow: visible;
+}
+h1, h2{
+  text-align: center;
+}
+.AP, .GP{
+  display: ;
+  width:100%;
+}
+#clear, #clear1{
+ padding:auto 4px;
+  margin-left: 40%;
+  width:15%;
+}
+label{
+  font-size: 25px;
+  text-transform: capitalize;
+}
+td{
+  width:50%;
+  text-align: center;
+}
+/*Phone view*/
+@media(max-width:750px){
+  
+}
+/*desktop view*/
+@media(min-width:750px){
+  
+}
